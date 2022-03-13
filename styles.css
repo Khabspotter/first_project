@@ -1,0 +1,54 @@
+body {
+    background-image: url(./images/ahoy.jpg);
+    background-attachment: fixed;
+    background-size: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: grid;
+    width: 350px;
+    height: 300px;
+    background-color: beige;
+    border:2px black solid;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgb(155, 155, 155);
+    margin: 20px;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "level sn"
+      "title title"
+      "description description"; 
+}
+
+.level {
+     grid-area: level; 
+     margin-top: 10px;
+     text-align: center;
+     max-height: 150px;
+     border-right: 2px rgb(197, 197, 197) solid;
+    }
+.sn { 
+    grid-area: sn; 
+    max-height: auto;
+    text-align: center;
+
+}
+.title {
+     grid-area: title; 
+     text-align: center;
+     border-top: 2px rgb(197, 197, 197) solid;
+    }
+.description { 
+    grid-area: description; 
+    max-height:auto;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    padding-top: 10px;
+    border-top: 2px rgb(197, 197, 197) solid;
+}
